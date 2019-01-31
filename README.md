@@ -1,2 +1,4 @@
 # Ciclos
-Trabajos de ciclos de primer semestre de Ing. en Sistemas
+Trabajos realizados durante la carrera de Ing. en Sistemas
+  Estos trabajos solo deben servir como consulta y en ningún
+  caso para apropiarse de ellos
