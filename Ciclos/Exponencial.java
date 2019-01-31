@@ -1,28 +1,43 @@
 import java.util.Scanner;
 public class Exponencial{
 
+int base = 0;
+int exp = 0;
+int acumulador = 1;
 
-int exponencial = 1;
-int acumulador = 0;
+public void Leer(){
 
-public void leer(){
 Scanner sc = new Scanner(System.in);
 
-System.out.println("Inserte número exponencial");
-acumulador = sc.nextInt();
+      System.out.println("Ingrese valor de la base");
+        base = sc.nextInt();
+
+      System.out.println("Ingrese valor del exponente");
+        exp = sc.nextInt();
 }
 
-public void ciclo(){
-while(acumulador > 0){
+public void Calcular(){
 
-exponencial = exponencial * acumulador;
-acumulador--;
+for (int i = 1; i <= exp ; i++ ) {
+
+acumulador = acumulador * base;
+
 }
 }
+public void Presentar(){
 
-public void presentar(){
-System.out.println("El resultado de tu número exponencial es: " + exponencial);
+System.out.println();
+System.out.println(base + " Elevado a la " + exp + " es igual a: " + acumulador);
+
 }
 
+
+public static void main(String[] args) {
+  Exponencial obj = new Exponencial();
+
+  obj.Leer();
+  obj.Calcular();
+  obj.Presentar();
+}
 
 }

@@ -1,55 +1,49 @@
-import java.util.Scanner;
-public class PNPO5{
+import java.util.Random;
+public class PNPO5 {
 
-
-int Calfo=0;
-int Calf=0;
+int acumulador = 0;
 double Prom=0;
-double Acumulador=0;
+int Calf = 0;
+int Num= 0;
+int Acumulador2=0;
 
-public void Leer(){
+public void Random(){
 
-Scanner sc = new Scanner(System.in);
-System.out.println();
-System.out.println("Inserte número");
-Calf=sc.nextInt();
-
-}
-
-public void Calcular(){
-
-Leer();
-while(Calf > 0 || Calf < 0){
-
-if (Calf % 10 == 5) {
-  Acumulador++;
-Calfo = Calfo + Calf;
-Prom = Calfo / Acumulador;
-}else{
-Calf=0;
-}
-
+Random rd = new Random();
+Num= rd.nextInt(100);
 
 }
 
+public void Calculo(){
+
+do{
+  while(Acumulador2 <4){
+  Random();
+  System.out.println(Num);
+if (Num%10 == 5) {
+acumulador++;
+Calf = Num + Calf;
+Prom = Calf/acumulador;
 }
+Num=0;
+Acumulador2++;
+}
+} while(Num > 0 || Num < 0);
+}
+
+
 
 public void Presentar(){
 
-System.out.println("El promedio de calificación es: " + Prom);
+  System.out.println();
+  System.out.println(Prom);
 }
 
+public static void main(String[] args) {
+  PNPO5 PNP = new PNPO5();
 
-
-
-
-public static void main(String []args)
-{
-
-PNPO PNP = new PNPO();
-
-PNP.Calcular();
-PNP.Presentar();
-
+  PNP.Calculo();
+  PNP.Presentar();
 }
+
 }
